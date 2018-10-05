@@ -53,4 +53,19 @@ class BackendController extends Controller
     }
 
 
+    public function  ajax_show_tests(Request $request){
+
+        //dd($request);
+
+        $request->all();
+
+        $object = new Backend();
+
+        $tests = $object->show_tests($request);
+
+        return view('backend.dashboard', compact('tests'));
+
+    }
+
+
 }

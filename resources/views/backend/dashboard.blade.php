@@ -140,7 +140,7 @@
                      </div>
 
                      <div class="form-group">
-                         <input class="get_value"  type="checkbox" id="t_1"  value="on" name="t_1">
+                         <input type="checkbox" id="t_1"  value="on" name="t_1">
                          <label for="t_1">Правильный ответ</label>
                      </div>
 
@@ -161,7 +161,7 @@
                      </div>
 
                      <div class="form-group">
-                         <input class="get_value" type="checkbox" id="t_2"  value="on" name="t_2">
+                         <input  type="checkbox" id="t_2"  value="on" name="t_2">
 
                          <label for="t_2">Правильный ответ</label>
                      </div>
@@ -535,23 +535,6 @@
     </script>
 
 
-
-    <script>
-
-        $("#btn_").on('click', function () {
-            var checkbox_value = "";
-            $(":checkbox").each(function () {
-                var ischecked = $(this).is(":checked");
-                if (ischecked) {
-                    checkbox_value += $(this).val();
-                }
-            });
-            alert(checkbox_value);
-        });
-
-
-    </script>
-
     <script>
 
 
@@ -562,19 +545,17 @@
             }, 100);
         }
 
-
     </script>
 
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+
     <script>
         $(function() {
+
             $('.datatable').DataTable();
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_square_purple',
-                radioClass: 'iradio_square_purple'
-            });
+
         });
     </script>
 

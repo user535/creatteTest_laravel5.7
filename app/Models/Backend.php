@@ -66,8 +66,6 @@ class Backend extends Model
             ));
 
 
-            $request->session()->put('qn',$request['question_id']);
-
             return response();
 
         }
@@ -91,9 +89,7 @@ class Backend extends Model
 
                 'item_id' => $request['item_id'],
 
-                //'question_id' => $request['question_id'],
-
-                'question_id' => $request->session()->get('qn'),
+                'question_id' => $request['question_id'],
 
                 'otvet1_rus' => $request['otvet1_rus'],
 
@@ -145,7 +141,7 @@ class Backend extends Model
 
             ));
 
-            $request->session()->forget('qn');
+
 
             return response();
 
@@ -159,5 +155,22 @@ class Backend extends Model
         return false;
     }
 
+/*
+    public function show_tests($request)
+    {
+
+
+            return response();
+
+        }
+
+        else{
+
+        }
+
+        return false;
+    }
+
+*/
 
 }
